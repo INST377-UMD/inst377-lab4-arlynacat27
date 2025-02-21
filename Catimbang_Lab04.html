@@ -1,14 +1,79 @@
 <html>
     <head>
-
+        <title>Arlyna's Lab 4 </title>
+        <link rel="stylesheet" href="Catimbang_Lab04.css">
     </head>
 
     <body>
+        <h1 id="main-heading">Arlyna's Dynamic Web Page</h1>
 
+        <div class="grid-container">
+            <!-- alert section -->
+            <div class="section">
+                <form id="alertForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <button type="button" onclick="alertName()">Alert Me!</button>
+                </form>
+            </div>
+    
+            <!-- change color -->
+            <div class="section">
+                <button onclick="changeColor()">Change Color</button>
+            </div>
+    
+            <!-- test test -->
+            <div class="section">
+                <form id="textForm">
+                    <label for="textIn">Text Tester:</label>
+                    <input type="text" id="textIn" required>
+                    <button type="button" onclick="validateText()">Validate Text</button>
+                </form>
+            </div>
+    
+            <!-- add text -->
+            <div class="section">
+                <button onclick="addText()">Add Text</button>
+            </div>
+        </div>
+    
 
-        
+        <!--javascript-->
+        <script type="text/javascript">
+            
+            function alertName() {
+                const name = document.getElementById("name").value;
+                if (name) {
+                    alert(`Hi ${name}!`);
+                } else {
+                    alert("Please enter your name.");
+                }
+            }
+
+            let isPurple = true;
+            function changeColor() {
+                document.body.style.backgroundColor = isPurple ? "#90EE90" : "#CCCCFF";
+                isPurple = !isPurple;
+            }
+
+            function validateText() {
+                const textIn = document.getElementById("textIn").value;
+                const valid = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+                if (valid.test(textIn)) {
+                    alert("Special characters are not allowed!");
+                } else {
+                    alert("Text is valid!");
+                }
+            }
+
+            function addText() {
+                const heading = document.querySelector("h1");
+                if (!heading.innerText.includes("Add Text")) {
+                    heading.innerText += " - Add Text";
+                }
+            } 
+        </script>
+    
     </body>
-
-
-
 </html>
