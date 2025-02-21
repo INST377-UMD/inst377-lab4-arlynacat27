@@ -1,0 +1,52 @@
+/* style page */
+body {
+    background-color: #CCCCFF;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* heading style */
+h1 {
+    color: black;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+/* grid layout style */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* section style */
+.section {
+    background-color: #800080;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* form style */
+input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    color: black;
+    cursor: pointer;
+}
+
+
